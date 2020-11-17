@@ -1,0 +1,133 @@
+<html>
+<head>
+		<title>LoM Bingo Tracker</title>
+
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" type="image/png" href="images/dudbear.png">
+<!-- use this to set the icon for the page/tracker -->
+
+<script src="script/items.js"></script>
+
+<script>
+var rowLength = 7;
+var prizes = [];
+var medallions = [0, 0];
+
+// Event of clicking on the tracker
+function toggle(label){
+	if(label.substring(0,2) == "af"){
+		document.getElementById(label).className = (artifact[label]=!artifact[label]);
+	}
+	else{
+		document.getElementById(label).className = (encyclopedia[label]=!encyclopedia[label]);
+	}
+	
+}
+
+</script>
+
+</head>
+
+<body>
+
+<!-- ARTIFACT TAG -->
+<button class="header" onclick="hide_section('artifact_tracker')">Artifacts</button>
+<br>
+
+<!-- ARTIFACT TABLE -->
+<table class="tracker" cellpadding="0" cellspacing="0" border="0" align="center" id="artifact_tracker">
+<script>
+
+var itemList = Object.keys(artifact);
+var k = 0;
+while(k < itemList.length){
+	for(j=0; j<rowLength; j++){
+		var x = itemList[k];
+		document.write("<td style='background-image:url(images/"+x+".png);' ");
+		document.write("id='"+x+"' ");
+		document.write("class='"+!!artifact[x]+"' ");
+		document.write("onClick='toggle("+'"'+x+'"'+")'>");
+		document.write("</td>");
+		if(++k == itemList.length)
+			break;
+	}
+	document.write("</tr>");
+}
+
+document.write("</table>");
+
+</script>
+
+<!-- ENCYCLOPEDIA TAG -->
+<button class="header" onclick="hide_section('encyclo_tracker')">Encyclopedias</button>
+<br>
+
+
+<!-- ENCYCLOPEDIA TABLE -->
+<table class="tracker" cellpadding="0" cellspacing="0" border="0" align="center" id="encyclo_tracker">
+<script>
+
+var itemList = Object.keys(encyclopedia);
+var k = 0;
+while(k < itemList.length){
+	for(j=0; j<rowLength; j++){
+		var x = itemList[k];
+		document.write("<td style='background-image:url(images/"+x+".png);' ");
+		document.write("id='"+x+"' ");
+		document.write("class='"+!!encyclopedia[x]+"' ");
+		document.write("onClick='toggle("+'"'+x+'"'+")'>");
+		document.write("</td>");
+
+		if(++k == itemList.length)
+			break;
+	}
+	document.write("</tr>");
+}
+
+document.write("</table>");
+</script>
+
+<!-- DU TAG -->
+<button class="header" onclick="hide_section('du_tracker')">Bunny Apes</button>
+<br>
+
+
+<!-- DU TABLE -->
+<table class="tracker" cellpadding="0" cellspacing="0" border="0" align="center" id="du_tracker">
+<script>
+
+var itemList = Object.keys(du);
+var k = 0;
+while(k < itemList.length){
+	for(j=0; j<rowLength; j++){
+		var x = itemList[k];
+		document.write("<td style='background-image:url(images/"+x+".png);' ");
+		document.write("id='"+x+"' ");
+		document.write("class='"+!!du[x]+"' ");
+		document.write("onClick='toggle("+'"'+x+'"'+")'>");
+		document.write("</td>");
+
+		if(++k == itemList.length)
+			break;
+	}
+	document.write("</tr>");
+}
+
+document.write("</table>");
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

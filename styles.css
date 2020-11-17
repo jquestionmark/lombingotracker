@@ -1,0 +1,74 @@
+img {
+	/* image-rendering: pixelated; */
+	/* image-rendering: -webkit-optimize-contrast; */
+	image-rendering: crisp-edges;
+	image-rendering: -moz-crisp-edges;          /* Firefox */
+	image-rendering: -o-crisp-edges;            /* Opera */
+	image-rendering: -webkit-optimize-contrast; /* Webkit (non-standard naming)*/
+}
+
+body{
+	background-color: rgb(16,16,16);
+	margin: 0px;
+	color:white;
+	font-family: "Tahoma", Times, serif;
+}
+
+.tracker{
+	background-color: rgb(0,0,0);
+	clear: left;
+	float: left;
+	/* position: absolute; */
+	/* left: 0px; */
+	/* top: 0px; */
+}
+
+td{
+	width: 48px;
+	height: 48px;
+	background-repeat: no-repeat;
+	background-size: 48px 48px;
+	color: white;
+	font-weight: bold;
+	text-shadow: 2px 2px 3px #000000, 
+		-2px 2px 3px #000000, 
+		-2px -2px 3px #000000,
+		2px -2px 3px #000000,
+		2px 0px 3px #000000,
+		-2px 0px 3px #000000,
+		0px 2px 3px #000000,
+		0px -2px 3px #000000;
+	cursor: default;
+}
+
+.true{
+	opacity: 1;
+}
+
+.false{
+	opacity: 0.25;
+}
+
+.half {
+	opacity: 0.70;
+}
+
+button.header {
+	width: 336px;
+	margin: auto;
+	clear: left;
+	float: left;
+	padding-top: 16px;
+	padding-left: 8px;
+	padding-bottom: 8px;
+	box-sizing: border-box;
+	background-color: rgb(16,16,16);
+	color: rgb(200,200,200);
+	text-align: left;
+	border: 0px;
+	font-size: 16px;   
+}
+
+
+
+
